@@ -16,7 +16,7 @@ public class ProductMaterialRecipe {
 
     @Id
     @Column(name = "p_id", length = 50)
-    private String pId;
+    private String productId;
 
     @Id
     @Column(name = "r_id", length = 50)
