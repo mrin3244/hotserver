@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Sales Entry | i-Tea Hub</title>
+	<div th:replace="~{admin/layouts/main-header}"></div>
+	
+	<script src="admin/js/custom/salesEntry.js"></script>
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+	<!-- Site wrapper -->
+	<div class="wrapper">
+
+  		<!-- Navbar -->
+		<div th:replace="~{admin/layouts/header-menu}"></div>
+		
+		<!-- Main Left Sidebar Container -->
+		<div th:replace="~{admin/layouts/left-menu}"></div>
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper">
+			<!-- Content Header (Page header) -->
+			<section class="content-header">
+				<div class="container-fluid">
+					<div class="row mb-2">
+						<div class="col-sm-6">
+							<h1>Sales Entry</h1>
+						</div>
+						<div class="col-sm-6">
+							<ol class="breadcrumb float-sm-right">
+								<li class="breadcrumb-item"><a href="/">Home</a></li>
+								<li class="breadcrumb-item active">Sales Entry</li>
+							</ol>
+						</div>
+					</div>
+				</div><!-- /.container-fluid -->
+			</section>
+
+			<!-- Main content -->
+			<div class="content">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5">
+							<div class="card card-info card-outline shadow-lg">
+								<div class="card-body">
+									<select id="category" class="form-control-lg" style="width: 100%;">
+										<option value="1">Tea</option>
+									</select>
+									<br><br>
+									<select id="item" class="form-control-lg" style="width: 100%;">
+										<option value="0">Lemon Tea</option>
+									</select>
+									<br><br>
+									<div class="btn-group" style="width: 100%; flex-wrap: wrap !important;">
+										<button type="button" id="itemRemove" class="btn btn-lg bg-orange text-lg"><i class="fas fa-minus"></i></button>
+										<span class="btn btn-default text-center text-lg text-bold" id="itemCount">1</span>
+										<button type="button" id="itemAdd" class="btn btn-info btn-lg text-lg"><i class="fas fa-plus"></i></button>
+										<button type="button" id="itemClear" class="btn btn-lg bg-danger text-lg"><i class="fas fa-trash"></i></button>
+										<button type="button" id="itemSubmit" class="btn btn-lg bg-success text-lg"><i class="fas fa-check"></i></button>
+									</div>
+									<br><br>
+									<table id="itemsTable" style="width: 100%; font-size: larger;"></table>
+									<br><br>
+									<button type="button" id="btnSubmit" class="btn btn-block btn-success btn-lg text-lg text-bold" style="letter-spacing: 5px;">
+										SUBMIT&nbsp;[<span id="total">0</span>]</button>
+								</div>
+							</div>
+							<!-- /.card -->
+						</div>
+						<!-- /.col -->
+						<div class="col-lg-2">
+						</div>
+						<!-- /.col -->
+						<div class="col-lg-5">
+							<div class="card card-success card-outline shadow-lg">
+								<div class="card-body">
+									<div class="form-group">
+										<input type="file" id="posExcelFile" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+										<button type="button" class="btn btn-info" id="btnPosExcelUpload">Upload</button>
+									</div>
+								</div>
+								<!-- /.card-body -->
+							</div>
+							<!-- /.card -->
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</div><!-- /.container-fluid -->
+			</div>
+			<!-- /.content -->
+		</div>
+		<!-- /.content-wrapper -->
+
+		<div th:replace="~{admin/layouts/footer}"></div>
+		
+	</div>
+	<!-- ./wrapper -->
+</body>
+
+</html>

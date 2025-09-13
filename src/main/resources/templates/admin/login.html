@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Login | i-Tea Hub</title>
+	<div th:replace="~{admin/layouts/main-header}"></div>
+	
+	<script src="admin/js/custom/login.js"></script>
+	<script src="js/captcha.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha512/0.8.0/sha512.js" integrity="sha512-i4HLZ1JUoWLoDfgFlZGjzoWJYa55JAGr9XMxpH2k7OxtvF2qI02P+V2c8Z39s9SjxWGCJ04zMXrq106juXOywA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body class="hold-transition login-page">
+	<div class="login-box">
+		<div class="login-logo">
+			<a href="/"><b>HS</b> i-Tea Hub</a>
+		</div>
+		<!-- /.login-logo -->
+		<div class="card">
+			<div class="card-body login-card-body">
+				<p class="login-box-msg">Login to start your Session</p>
+				<div class="input-group mb-3">
+					<input type="tel" id="username" maxlength="10" class="form-control" placeholder="Mobile" required>
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-user"></span>
+						</div>
+					</div>
+				</div>
+				<div class="input-group mb-3">
+					<input type="password" class="form-control" id="password" placeholder="Password" maxlength="20" required>
+					<div class="input-group-append">
+						<div class="input-group-text">
+							<span class="fas fa-lock"></span>
+						</div>
+					</div>
+				</div>
+				<div class="input-group mb-3">
+					<input type="text" id="txtCaptcha" class="form-control" style="font-size: x-large; font-weight: bold; font-family: Modern; text-align: center;" readonly tabindex="-1">
+					<div class="input-group-append">
+						<div class="input-group-text" style="cursor: pointer;" onclick="drawCaptcha();">
+							<span class="fas fa-sync-alt"></span>
+						</div>
+					</div>
+				</div>
+				<div class="input-group mb-3">
+					<input type="text" id="txtCaptchaInput" class="form-control" placeholder="Captcha" maxlength="5">
+					<div class="input-group-append">
+						<div class="input-group-text" style="cursor: pointer;" onclick="drawCaptcha();">
+							<span class="fas fa-pen"></span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4"></div>
+					<!-- /.col -->
+					<div class="col-4">
+						<button type="button" id="btnSubmit" class="btn btn-primary btn-block">LOGIN</button>
+					</div>
+					<!-- /.col -->
+					<div class="col-4"></div>
+					<!-- /.col -->
+				</div>
+			</div>
+			<!-- /.login-card-body -->
+		</div>
+	</div>
+	<!-- /.login-box -->
+
+</body>
+
+</html>

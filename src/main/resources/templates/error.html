@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hot Server i-Tea Hub</title>
+    
+	<div th:replace="~{layouts/main-header}"></div>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+
+        <!-- Spinner Start -->
+		<div th:replace="~{layouts/loader}"></div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+			
+            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+                <div class="container text-center my-5 pt-5 pb-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">ERROR</h1>
+                    <a href="/" class="btn btn-primary py-2 px-4">HOME</a>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+        
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+
+<head>
+	<title>Sales Entry | i-Tea Hub</title>
+	<div th:replace="~{admin/layouts/main-header}"></div>
+
+	<script src="admin/js/custom/salesEntry.js"></script>
+</head>
+
+<body class="hold-transition layout-top-nav">
+	<div class="wrapper">
+
+		<!-- Navbar -->
+		<nav class="main-header navbar navbar-expand-md navbar-light navbar-teal">
+			<div class="container">
+				<a href="/" class="navbar-brand">
+					<img src="admin/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+						style="opacity: .8">
+					<span class="brand-text font-weight-light">&nbsp;i-Tea Hub</span>
+				</a>
+
+
+				<!-- Right navbar links -->
+				<ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" data-widget="fullscreen" href="#" role="button">
+							<i class="fas fa-expand-arrows-alt"></i>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="logout" class="nav-link" role="button">
+							<i class="fas fa-sign-out-alt"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- /.navbar -->
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper">
+			<!-- Content Header (Page header) -->
+			<div class="content-header">
+			</div>
+			<!-- /.content-header -->
+
+			<!-- Main content -->
+			<div class="content">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5">
+							<div class="card card-warning shadow-lg">
+								<div class="card-header">
+									<h3 class="card-title text-lg text-bold">Sales Entry</h3>
+								</div>
+								<div class="card-body">
+									<select id="category" class="form-control-lg" style="width: 100%;">
+										<option value="1">Tea</option>
+									</select>
+									<br><br>
+									<select id="item" class="form-control-lg" style="width: 100%;">
+										<option value="1">Lemon Tea</option>
+									</select>
+									<br><br>
+									<div class="btn-group" style="width: 100%; flex-wrap: wrap !important;">
+										<button type="button" id="itemRemove" class="btn btn-lg bg-orange text-lg"><i class="fas fa-minus"></i></button>
+										<span class="btn btn-default text-center text-lg text-bold" id="itemCount">1</span>
+										<button type="button" id="itemAdd" class="btn btn-info btn-lg text-lg"><i class="fas fa-plus"></i></button>
+										<button type="button" id="itemClear" class="btn btn-lg bg-danger text-lg"><i class="fas fa-trash"></i></button>
+										<button type="button" id="itemSubmit" class="btn btn-lg bg-success text-lg"><i class="fas fa-check"></i></button>
+									</div>
+									<br><br>
+									<table id="itemsTable" style="width: 100%; font-size: larger;"></table>
+									<br><br>
+									<button type="button" id="btnSubmit" class="btn btn-block btn-success btn-lg text-lg text-bold" style="letter-spacing: 5px;">SUBMIT&nbsp;[<span id="total">0</span>]</button>
+								</div>
+							</div><!-- /.card -->
+						</div>
+						<!-- /.col -->
+					</div>
+					<!-- /.row -->
+				</div><!-- /.container-fluid -->
+			</div>
+			<!-- /.content -->
+		</div>
+		<!-- /.content-wrapper -->
+
+		<div th:replace="~{admin/layouts/footer}"></div>
+
+	</div>
+	<!-- ./wrapper -->
+
+
+</body>
+
+</html>

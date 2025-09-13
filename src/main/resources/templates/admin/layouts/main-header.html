@@ -1,0 +1,45 @@
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Google Font: Source Sans Pro -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="admin/css/font-awesome.min.css">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="admin/css/adminlte.min.css">
+	<!-- pace-progress -->
+	<link rel="stylesheet" href="admin/css/pace-flat-top.css">
+	
+	
+	
+	<!-- REQUIRED SCRIPTS -->
+	
+	<!-- jQuery -->
+	<script src="admin/js/jquery.min.js"></script>
+	<!-- Bootstrap 4 -->
+	<script src="admin/js/bootstrap.bundle.min.js"></script>
+	<!-- AdminLTE App -->
+	<script src="admin/js/adminlte.min.js"></script>
+	<!-- pace-progress -->
+	<script src="admin/js/pace.js"></script>
+	<!-- Custom Toasts -->
+	<script src="admin/js/custom/toasts.js"></script>
+	
+	<!-- Active Sidebar Menu -->
+	<script>
+		$(function () {
+			/** add active class and stay opened when selected */
+			var url = window.location;
+			
+			// for sidebar menu entirely but not cover treeview
+			$('ul.nav-sidebar a').filter(function() {
+			    return this.href == url;
+			}).addClass('active');
+			
+			// for treeview
+			$('ul.nav-treeview a').filter(function() {
+			    return this.href == url;
+			}).parentsUntil(".nav-sidebar > .nav-treeview").addClass('menu-open').prev('a').addClass('active');
+
+		});
+	</script>
